@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cb8a267-a231-4a27-8e46-3e9dc1710610" name="Default" comment="Merge branch 'master' of https://github.com/Ashish-svg/tongue_twister into robin_dev&#10;&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProjectTongueTwister/tongue_twisters/classes/Constants.class" afterPath="$PROJECT_DIR$/out/production/ProjectTongueTwister/tongue_twisters/classes/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProjectTongueTwister/tongue_twisters/classes/LengthsJson.class" afterPath="$PROJECT_DIR$/out/production/ProjectTongueTwister/tongue_twisters/classes/LengthsJson.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProjectTongueTwister/tongue_twisters/classes/TwisterElementsCreation.class" afterPath="$PROJECT_DIR$/out/production/ProjectTongueTwister/tongue_twisters/classes/TwisterElementsCreation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProjectTongueTwister/tongue_twisters/classes/Utils.class" afterPath="$PROJECT_DIR$/out/production/ProjectTongueTwister/tongue_twisters/classes/Utils.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProjectTongueTwister/tongue_twisters/others/TongueTwistersRaw.txt" afterPath="$PROJECT_DIR$/out/production/ProjectTongueTwister/tongue_twisters/others/TongueTwistersRaw.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProjectTongueTwister/tongue_twisters/others/lengths.json" afterPath="$PROJECT_DIR$/out/production/ProjectTongueTwister/tongue_twisters/others/lengths.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProjectTongueTwister/tongue_twisters/others/levels.json" afterPath="$PROJECT_DIR$/out/production/ProjectTongueTwister/tongue_twisters/others/levels.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tongue_twisters/classes/LengthsJson.java" afterPath="$PROJECT_DIR$/src/tongue_twisters/classes/LengthsJson.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tongue_twisters/classes/TwisterElementsCreation.java" afterPath="$PROJECT_DIR$/src/tongue_twisters/classes/TwisterElementsCreation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tongue_twisters/others/lengths.json" afterPath="$PROJECT_DIR$/src/tongue_twisters/others/lengths.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tongue_twisters/others/levels.json" afterPath="$PROJECT_DIR$/src/tongue_twisters/others/levels.json" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,6 +38,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="SortedTongueTwisters.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SortedTongueTwisters.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6705">
+              <caret line="447" column="75" lean-forward="false" selection-start-line="447" selection-start-column="75" selection-end-line="447" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="lengths.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tongue_twisters/others/lengths.json">
           <provider selected="true" editor-type-id="text-editor">
@@ -59,17 +58,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TongueTwistersRaw.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TongueTwistersRaw.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tongue_twisters/others/TongueTwistersRaw.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-775">
               <caret line="0" column="32" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="twisterElements.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="twisterElements.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tongue_twisters/others/twisterElements.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="384">
@@ -1250,14 +1249,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SortedTongueTwisters.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6705">
-          <caret line="447" column="75" lean-forward="false" selection-start-line="447" selection-start-column="75" selection-end-line="447" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tongue_twisters/classes/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1318,6 +1309,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/tongue_twisters/others/lengths.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tongue_twisters/others/twisterElements.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="9003" column="1" lean-forward="false" selection-start-line="9003" selection-start-column="1" selection-end-line="9003" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tongue_twisters/TwisterElementsCreation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/tongue_twisters/classes/SortedTwisters.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-303">
@@ -1328,26 +1343,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tongue_twisters/others/lengths.json">
+    <entry file="file://$PROJECT_DIR$/SortedTwisters.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SortedTongueTwisters.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6705">
+          <caret line="447" column="75" lean-forward="false" selection-start-line="447" selection-start-column="75" selection-end-line="447" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tongue_twisters/others/TongueTwistersRaw.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-775">
           <caret line="0" column="32" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tongue_twisters/others/twisterElements.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="9003" column="1" lean-forward="false" selection-start-line="9003" selection-start-column="1" selection-end-line="9003" selection-end-column="1" />
           <folding />
         </state>
       </provider>
