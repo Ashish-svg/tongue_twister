@@ -1,4 +1,4 @@
-package tongue_twisters;
+package tongue_twisters.classes;
 
 @SuppressWarnings("unused")
 public class TwisterJson {
