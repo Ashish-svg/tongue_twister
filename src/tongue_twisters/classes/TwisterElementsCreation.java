@@ -6,6 +6,9 @@ import java.util.List;
 public class TwisterElementsCreation {
 
     private static final int COUNT_TWISTERS = 600;
+    private static final int NUM_LEVELS_BY_LENGTH = 3;
+    private static final int NUM_LEVELS_BY_DIFFICULTY = 10;
+
     private static final String END_JSON = "\n\t]\n}";
     private static final String START_JSON_TWISTERS = "{\n\t\"tongue_twisters\": [";
 
@@ -14,11 +17,14 @@ public class TwisterElementsCreation {
         List<LevelsJson>  levelsList = new ArrayList<>();
         List<LengthsJson> lengthsList = new ArrayList<>();
 
-        for (int index = 1; index <= COUNT_TWISTERS; index++) {
+        for (int index = 1; index <= COUNT_TWISTERS; index++)
             twisterList.add(index-1, new TwisterJson(index));
-            levelsList.add(index-1,new LevelsJson());
-            lengthsList.add(index-1,new LengthsJson());
-        }
+
+        for (int index = 1; index <= NUM_LEVELS_BY_DIFFICULTY; index++)
+            levelsList.add(index-1, new LevelsJson());
+
+        for (int index = 1; index <= NUM_LEVELS_BY_LENGTH; index++)
+            lengthsList.add(index-1, new LengthsJson());
 
         System.out.println(getBuilderString(twisterList));
         System.out.println(getLevelsBuilderString(levelsList));
