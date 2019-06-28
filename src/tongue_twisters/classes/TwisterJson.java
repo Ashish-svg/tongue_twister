@@ -1,4 +1,4 @@
-package tongue_twisters;
+package tongue_twisters.classes;
 
 @SuppressWarnings("unused")
 public class TwisterJson {
@@ -45,14 +45,14 @@ public class TwisterJson {
 
     String getTwisterJson() {
         return "\n\t\t{" +
-                "\n\t\t\tindex: " + index + "," +
-                "\n\t\t\ttitle: \"" + title + "\"," +
-                "\n\t\t\ttwister: \"" + twister + "\"," +
-                "\n\t\t\tlength: " + length + "," +
-                "\n\t\t\tdifficulty: " + difficulty + "," +
-                "\n\t\t\ticon_url: \"" + icon_url + "\"," +
-                "\n\t\t\thint: \"" + hint + "\"," +
-                "\n\t\t\tis_locked: " + isLocked +
+                "\n\t\t\t\"index\": " + index + "," +
+                "\n\t\t\t\"title\": \"" + title + "\"," +
+                "\n\t\t\t\"twister\": \"" + twister + "\"," +
+                "\n\t\t\t\"length\": " + length + "," +
+                "\n\t\t\t\"difficulty\": " + difficulty + "," +
+                "\n\t\t\t\"icon_url\": \"" + icon_url + "\"," +
+                "\n\t\t\t\"hint\": \"" + hint + "\"," +
+                "\n\t\t\t\"is_locked\": " + isLocked +
                 "\n\t\t}";
     }
 
