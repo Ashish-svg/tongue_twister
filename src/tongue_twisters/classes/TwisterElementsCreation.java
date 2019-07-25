@@ -5,20 +5,35 @@ import java.util.List;
 
 public class TwisterElementsCreation {
 
-    private static final int COUNT_TWISTERS = 600;
+    private static final int COUNT_TWISTERS = 471;
     private static final int NUM_LEVELS_BY_LENGTH = 3;
     private static final int NUM_LEVELS_BY_DIFFICULTY = 10;
+
+    private static int LENGTH_BATCH_SIZE, DIFFICULTY_BATCH_SIZE;
 
     private static final String END_JSON = "\n\t]\n}";
     private static final String START_JSON_TWISTERS = "{\n\t\"tongue_twisters\": [";
 
     public static void main(String[] args) {
+
+        computeLengthBatchSize();
+        computeDifficultyBatchSize();
+
+        List<String> sortedTwistersList = new SortedTwisters().getSortedTwistersList();
+        System.out.println("sorted twisters length is " + sortedTwistersList.size());
+
         List<TwisterJson> twisterList = new ArrayList<>();
         List<LevelsJson>  levelsList = new ArrayList<>();
         List<LengthsJson> lengthsList = new ArrayList<>();
 
         for (int index = 1; index <= COUNT_TWISTERS; index++)
-            twisterList.add(index-1, new TwisterJson(index));
+            twisterList.add(index-1, new TwisterJson(
+                    index,
+                    sortedTwistersList.get(index - 1),
+                    getLengthLevelForIndex(index),
+                    getDifficultyLevelForIndex(index),
+                    getIsLockedForIndex(index)
+            ));
 
         for (int index = 1; index <= NUM_LEVELS_BY_DIFFICULTY; index++)
             levelsList.add(index-1, new LevelsJson());
@@ -29,6 +44,26 @@ public class TwisterElementsCreation {
         System.out.println(getBuilderString(twisterList));
         System.out.println(getLevelsBuilderString(levelsList));
         System.out.println(getLengthsBuilderString(lengthsList));
+    }
+
+    private static boolean getIsLockedForIndex(int index) {
+        return (index % DIFFICULTY_BATCH_SIZE) > 6;
+    }
+
+    private static int getLengthLevelForIndex(int index) {
+        return (index / LENGTH_BATCH_SIZE) + 1;
+    }
+
+    private static int getDifficultyLevelForIndex(int index) {
+        return (index / DIFFICULTY_BATCH_SIZE) + 1;
+    }
+
+    private static void computeLengthBatchSize() {
+        LENGTH_BATCH_SIZE = COUNT_TWISTERS / NUM_LEVELS_BY_LENGTH;
+    }
+
+    private static void computeDifficultyBatchSize() {
+        DIFFICULTY_BATCH_SIZE = COUNT_TWISTERS / NUM_LEVELS_BY_DIFFICULTY;
     }
 
     private static String getBuilderString(List<TwisterJson> twisterList) {
@@ -57,7 +92,6 @@ public class TwisterElementsCreation {
 
         lengthBuilder.append( "\n\t]\n}");
         return lengthBuilder.toString();
-
     }
 }
 

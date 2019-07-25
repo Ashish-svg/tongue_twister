@@ -15,7 +15,7 @@ class Utils {
                 builder.append("\\\'");
             }
             else if(c == '.' || c == '?' || c == '!') {
-                builder.append(c).append("\n");
+                builder.append(c).append("\\n");
             }
             else if(i > 0 && c == ' ' && (line.charAt(i-1) == '.' || line.charAt(i-1) == '?' || line.charAt(i-1) == '!')) {
                 skipBlock();

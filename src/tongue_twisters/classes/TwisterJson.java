@@ -12,15 +12,15 @@ public class TwisterJson {
     private String icon_url;
     private String hint;
 
-    TwisterJson(int index) {
+    TwisterJson(int index, String twister, int length, int difficulty, boolean isLocked) {
         this.index = index;
         this.title = "";
-        this.twister = "";
-        this.length = 0;
-        this.difficulty = 0;
+        this.twister = twister;
+        this.length = length;
+        this.difficulty = difficulty;
         this.icon_url = "";
         this.hint = "";
-        this.isLocked = false;
+        this.isLocked = isLocked;
     }
 
     public TwisterJson(

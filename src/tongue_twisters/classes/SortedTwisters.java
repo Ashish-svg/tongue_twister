@@ -6,15 +6,17 @@ import java.util.List;
 
 import static tongue_twisters.classes.Constants.robinMacProjectLocation;
 
-@SuppressWarnings("FieldCanBeLocal")
 public class SortedTwisters {
 
     private static int index = 0;
     private static List<String> sortedTwisters = new ArrayList<>();
 
-    private static String line;
-    private static FileReader fileReader;
     private static BufferedReader bufferedReader;
+
+    //TODO: toggle as required
+    private static boolean isPrintEnabled = false;
+
+    SortedTwisters() { main(null); }
 
     public static void main(String[] args)  {
 
@@ -39,6 +41,7 @@ public class SortedTwisters {
 
     private static void addTwistersToList() {
         try {
+            String line;
             while((line = bufferedReader.readLine()) != null) {
                 if(line.length() > 0)
                     sortedTwisters.add(index, Utils.getFormattedStringForLine(line));
@@ -52,7 +55,7 @@ public class SortedTwisters {
 
     private static void initVariables() {
         try {
-            fileReader = new FileReader(robinMacProjectLocation);
+            FileReader fileReader = new FileReader(robinMacProjectLocation);
             bufferedReader = new BufferedReader(fileReader);
         }
         catch (FileNotFoundException e) {
@@ -60,13 +63,20 @@ public class SortedTwisters {
         }
     }
 
+    List<String> getSortedTwistersList() {
+        return sortedTwisters;
+    }
+
     private static void printAllTwisters() {
-        for(String temp: sortedTwisters)
-            System.out.println(temp);
+        if(isPrintEnabled)
+            for(String temp: sortedTwisters)
+                System.out.println(temp);
     }
 
     private static void printTwistersCount() {
-        System.out.println(
-                String.format("\n\nTotal number of twisters is %d", sortedTwisters.size()));
+        if(isPrintEnabled)
+            System.out.println(
+                    String.format("\n\nTotal number of twisters is %d", sortedTwisters.size())
+            );
     }
 }
