@@ -1,12 +1,14 @@
-package tongue_twisters.classes;
+package tongue_twisters.classes.creation;
+
+import tongue_twisters.classes.others.FormatUtils;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static tongue_twisters.classes.Constants.robinMacProjectLocation;
+import static tongue_twisters.classes.others.Constants.robinMacProjectLocation;
 
-public class SortedTwisters {
+public class MakeTwistersSort {
 
     private static int index = 0;
     private static List<String> sortedTwisters = new ArrayList<>();
@@ -16,7 +18,7 @@ public class SortedTwisters {
     //TODO: toggle as required
     private static boolean isPrintEnabled = false;
 
-    SortedTwisters() { main(null); }
+    MakeTwistersSort() { main(null); }
 
     public static void main(String[] args)  {
 
@@ -44,7 +46,7 @@ public class SortedTwisters {
             String line;
             while((line = bufferedReader.readLine()) != null) {
                 if(line.length() > 0)
-                    sortedTwisters.add(index, Utils.getFormattedStringForLine(line));
+                    sortedTwisters.add(index, FormatUtils.getFormattedStringForLine(line));
                 else
                     index++;
             }

@@ -1,8 +1,8 @@
-package tongue_twisters.classes;
+package tongue_twisters.classes.others;
 
-class Utils {
+public class FormatUtils {
 
-    static String getFormattedStringForLine(String line) {
+    public static String getFormattedStringForLine(String line) {
         StringBuilder builder = new StringBuilder();
 
         for(int i = 0; i < line.length(); i++) {
@@ -12,7 +12,7 @@ class Utils {
                 builder.append("\\\"");
             }
             else if(c == '\'') {
-                builder.append("\\\'");
+                builder.append("\\\\'");
             }
             else if(c == '.' || c == '?' || c == '!') {
                 builder.append(c).append("\\n");

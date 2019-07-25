@@ -1,25 +1,27 @@
-package tongue_twisters.classes;
+package tongue_twisters.classes.creation;
 
-public class LengthsJson {
+import static tongue_twisters.classes.creation.MakeTwisters.COUNT_TWISTERS;
+import static tongue_twisters.classes.creation.MakeTwisters.NUM_LEVELS_BY_LENGTH;
 
-    private static final int NUM_LEVELS_BY_LENGTH = 3;
-    private static final int COUNT_TWISTERS_PER_LEVEL_LENGTH = 200;
+public class MakeLengthLevel {
+
+    private static final int COUNT_TWISTERS_PER_LEVEL_LENGTH = COUNT_TWISTERS / NUM_LEVELS_BY_LENGTH;
 
     private String title;
     private String expanded_title;
     private String level_tip;
     private int[] indices = new int[COUNT_TWISTERS_PER_LEVEL_LENGTH];
 
-    LengthsJson() {
+    MakeLengthLevel() {
         this.title = "";
         this.expanded_title = "";
         this.level_tip="";
 
         for(int i = 0; i < COUNT_TWISTERS_PER_LEVEL_LENGTH; i++)
-            this.indices[i]=i+1;
+            this.indices[i] = i + 1;
     }
 
-    public LengthsJson(
+    public MakeLengthLevel(
             String title,
             String expanded_title,
             String level_tip,
@@ -44,29 +46,5 @@ public class LengthsJson {
         builder.append("\n]\n\t\t}");
 
         return builder.toString();
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getExpanded_title() {
-        return expanded_title;
-    }
-
-    public void setExpanded_title(String twister) {
-        this.expanded_title = expanded_title;
-    }
-
-    public String getLevel_tip() {
-        return level_tip;
-    }
-
-    public void setLevel_tip(String level_tip) {
-        this.level_tip = level_tip;
     }
 }

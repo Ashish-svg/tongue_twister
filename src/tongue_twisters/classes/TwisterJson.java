@@ -12,7 +12,7 @@ public class TwisterJson {
     private String icon_url;
     private String hint;
 
-    TwisterJson(int index, String twister, int length, int difficulty, boolean isLocked) {
+    public TwisterJson(int index, String twister, int length, int difficulty, boolean isLocked) {
         this.index = index;
         this.title = "";
         this.twister = twister;
@@ -43,7 +43,7 @@ public class TwisterJson {
         this.hint = hint;
     }
 
-    String getTwisterJson() {
+    public String getTwisterJson() {
         return "\n\t\t{" +
                 "\n\t\t\t\"index\": " + index + "," +
                 "\n\t\t\t\"title\": \"" + title + "\"," +
