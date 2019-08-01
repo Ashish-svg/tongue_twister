@@ -1,5 +1,5 @@
 {
-  "tongue_twisters": [
+  "twister": [
     {
       "index": 1,
       "title": "",
@@ -4711,34 +4711,9 @@
       "is_locked": false
     }
   ],
-  "lengths": [
+  "difficulty": [
     {
-      "title": "",
-      "expanded_title": "",
-      "level_tip": "",
-      "start_index": 1,
-      "end_index": 157,
-      "count": 157
-    },
-    {
-      "title": "",
-      "expanded_title": "",
-      "level_tip": "",
-      "start_index": 158,
-      "end_index": 314,
-      "count": 157
-    },
-    {
-      "title": "",
-      "expanded_title": "",
-      "level_tip": "",
-      "start_index": 315,
-      "end_index": 471
-    }
-  ],
-  "levels": [
-    {
-      "title": "",
+      "title": "Beginner's Luck",
       "expanded_title": "",
       "level_tip": "",
       "start_index": 1,
@@ -4746,7 +4721,7 @@
       "count": 47
     },
     {
-      "title": "",
+      "title": "Lit Up",
       "expanded_title": "",
       "level_tip": "",
       "start_index": 48,
@@ -4754,7 +4729,7 @@
       "count": 47
     },
     {
-      "title": "",
+      "title": "Speeding Up",
       "expanded_title": "",
       "level_tip": "",
       "start_index": 95,
@@ -4762,7 +4737,7 @@
       "count": 47
     },
     {
-      "title": "",
+      "title": "No Seat Belt",
       "expanded_title": "",
       "level_tip": "",
       "start_index": 142,
@@ -4770,15 +4745,15 @@
       "count": 47
     },
     {
-      "title": "",
+      "title": "No Helmet",
       "expanded_title": "",
       "level_tip": "",
-      "start_index": 1,
-      "end_index": 189,
-      "count": 235
+      "start_index": 189,
+      "end_index": 235,
+      "count": 47
     },
     {
-      "title": "",
+      "title": "Drunken Drive",
       "expanded_title": "",
       "level_tip": "",
       "start_index": 236,
@@ -4786,23 +4761,23 @@
       "count": 47
     },
     {
-      "title": "",
-      "expanded_title": "",
-      "level_tip": "",
-      "start_index": 1,
-      "end_index": 283,
-      "count": 329
-    },
-    {
-      "title": "",
+      "title": "Brake Fail",
       "expanded_title": "",
       "level_tip": "",
       "start_index": 283,
+      "end_index": 329,
+      "count": 47
+    },
+    {
+      "title": "Steering Wheel",
+      "expanded_title": "",
+      "level_tip": "",
+      "start_index": 330,
       "end_index": 376,
       "count": 47
     },
     {
-      "title": "",
+      "title": "Accident Certain",
       "expanded_title": "",
       "level_tip": "",
       "start_index": 377,
@@ -4810,12 +4785,38 @@
       "count": 47
     },
     {
-      "title": "",
+      "title": "Death Certain",
       "expanded_title": "",
       "level_tip": "",
       "start_index": 424,
       "end_index": 470,
       "count": 47
+    }
+  ],
+  "length": [
+    {
+      "title": "SMALL",
+      "expanded_title": "",
+      "level_tip": "",
+      "start_index": 1,
+      "end_index": 157,
+      "count": 157
+    },
+    {
+      "title": "MEDIUM",
+      "expanded_title": "",
+      "level_tip": "",
+      "start_index": 158,
+      "end_index": 314,
+      "count": 157
+    },
+    {
+      "title": "LONG",
+      "expanded_title": "",
+      "level_tip": "",
+      "start_index": 315,
+      "end_index": 471,
+      "count": 157
     }
   ]
 }

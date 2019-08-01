@@ -1,6 +1,7 @@
 package tongue_twisters.classes.creation;
 
 import tongue_twisters.classes.TwisterJson;
+import tongue_twisters.classes.others.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,8 +14,13 @@ public class MakeTwisters {
 
     private static int LENGTH_BATCH_SIZE, DIFFICULTY_BATCH_SIZE;
 
+    @SuppressWarnings("FieldCanBeLocal")
+    private static int levelStepCount;
     private static final String END_JSON = "\n\t]\n}";
     private static final String START_JSON_TWISTERS = "{\n\t\"tongue_twisters\": [";
+
+    private static List<String> lengthLevelNames = Constants.lengthLevelNames;
+    private static List<String> difficultyLevelNames = Constants.difficultyLevelNames;
 
     public static void main(String[] args) {
 
@@ -24,7 +30,7 @@ public class MakeTwisters {
         List<String> sortedTwistersList = new MakeTwistersSort().getSortedTwistersList();
 
         List<TwisterJson> twisterList = new ArrayList<>();
-        List<MakeDifficultyLevel>  levelsList = new ArrayList<>();
+        List<MakeDifficultyLevel>  difficultyList = new ArrayList<>();
         List<MakeLengthLevel> lengthsList = new ArrayList<>();
 
         for (int index = 1; index <= COUNT_TWISTERS; index++)
@@ -36,18 +42,35 @@ public class MakeTwisters {
                     getIsLockedForIndex(index)
             ));
 
-        for (int index = 1; index <= NUM_LEVELS_BY_DIFFICULTY; index++)
-            levelsList.add(index-1, new MakeDifficultyLevel(
-                    //TODO
+        levelStepCount = 0;
+        for (int index = 0; index < NUM_LEVELS_BY_LENGTH; index++) {
+            System.out.println(lengthLevelNames.get(index));
+            lengthsList.add(index, new MakeLengthLevel(
+                    lengthLevelNames.get(index),
+                    "",
+                    "",
+                    LENGTH_BATCH_SIZE * levelStepCount + 1,
+                    LENGTH_BATCH_SIZE * (levelStepCount + 1),
+                    LENGTH_BATCH_SIZE
             ));
+            levelStepCount++;
+        }
 
-        for (int index = 1; index <= NUM_LEVELS_BY_LENGTH; index++)
-            lengthsList.add(index-1, new MakeLengthLevel(
-                    //TODO
+        levelStepCount = 0;
+        for (int index = 0; index < NUM_LEVELS_BY_DIFFICULTY; index++) {
+            difficultyList.add(index, new MakeDifficultyLevel(
+                    difficultyLevelNames.get(index),
+                    "",
+                    "",
+                    DIFFICULTY_BATCH_SIZE * levelStepCount + 1,
+                    DIFFICULTY_BATCH_SIZE * (levelStepCount + 1),
+                    DIFFICULTY_BATCH_SIZE
             ));
+            levelStepCount++;
+        }
 
         System.out.println(getBuilderString(twisterList));
-        System.out.println(getLevelsBuilderString(levelsList));
+        System.out.println(getLevelsBuilderString(difficultyList));
         System.out.println(getLengthsBuilderString(lengthsList));
     }
 
