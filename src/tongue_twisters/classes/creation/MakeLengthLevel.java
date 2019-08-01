@@ -15,7 +15,7 @@ public class MakeLengthLevel {
     MakeLengthLevel() {
         this.title = "";
         this.expanded_title = "";
-        this.level_tip="";
+        this.level_tip = "";
 
         for(int i = 0; i < COUNT_TWISTERS_PER_LEVEL_LENGTH; i++)
             this.indices[i] = i + 1;
@@ -29,8 +29,8 @@ public class MakeLengthLevel {
     ) {
         this.title = title;
         this.expanded_title = expanded_title;
-        this.level_tip=level_tip;
-        this.indices=indices;
+        this.level_tip = level_tip;
+        this.indices = indices;
     }
 
     String getLengthsJson() {
